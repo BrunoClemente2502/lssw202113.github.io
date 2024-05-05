@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background-color: #ddd;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px; 
+}
+
+.risk-analysis h1 {
+    font-size: 45px; 
+    margin: 0; 
+    font-weight: bold;
+}
+
+/* Meteo and icon settings */
+.top-right-meteo {
+    display: flex;
+    padding: 10px;
+}
+
+#meteo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon img, .temperature-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.weather-icon {
+    margin-right: 10px;
+}
+
+.temperature-icon {
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
+
+/* Other sections */
+#adeptos, #diretores-seguranca, #recinto {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+h2 {
+    color: #004d99;
+}

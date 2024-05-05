@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar Evento</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/evento.css">
+    <script src="js/evento.js"></script>
+</head>
+<body>
+    <div id="menu-container"></div> 
+    <script src="js/menu.js"></script>
+    <div class="container">
+        <div class="form-section">
+            <h2>Registar Evento</h2>
+            <form id="registo-evento">
+                <label for="dataEvento">Data:</label>
+                <input type="date" id="dataEvento" name="dataEvento" required>
+                
+                <label for="visitado">Equipa 1:</label>
+                <input type="text" id="visitado" name="visitado" placeholder="Nome da Equipa 1" required>
+                
+                <label for="visitante">Equipa 2:</label>
+                <input type="text" id="visitante" name="visitante" placeholder="Nome da Equipa 2" required>
+                
+                <label for="arbitro">Árbitro:</label>
+                <input type="text" id="arbitro" name="arbitro" placeholder="Nome do Árbitro" required>
+                
+                <label for="competicao">Competição:</label>
+                <input type="text" id="competicao" name="competicao" placeholder="Nome da Competição" required>
+                
+                <label for="recinto">Recinto Desportivo:</label>
+                <input type="text" id="recinto" name="recinto" placeholder="Nome do Recinto Desportivo" required>
+                
+                <button type="submit">Registar evento</button>
+            </form>
+        </div>
+        <div class="list-section">
+            <h2>Eventos Registados</h2>
+            <ul id="eventsList">
+                <!--Eventos aqui-->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

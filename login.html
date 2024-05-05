@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/login.css">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <header>
+        <div id="menu-container"></div> 
+        <script src="js/menu.js"></script>  
+    </header>  
+    <main>
+        <div class="envolvimento">
+            <form id="login-form" action="/login" method="post">
+                <h1>Entrar</h1>
+                <div class="caixa-input">
+                    <label for="email" class="escondido">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                    <img src="imagens/login/bx-user.svg" alt="Utilizador">
+                </div>
+
+                <div class="caixa-input">
+                    <label for="password" class="escondido">Palavra-passe</label>
+                    <input type="password" name="password" id="password" required placeholder="Palavra-passe">
+                    <img src="imagens/login/bx-lock.svg" alt="Password">
+                </div>
+                
+                <div class="lembrar-esqueceu">
+                    <label for=""><input type="checkbox"> Lembre-se de mim</label>
+                    <a href="#">Recuperar palavra-passe?</a>
+                </div>
+
+                <button type="submit" class="btn">Entrar</button>
+                
+                <div class="link-registo">
+                    <p>Não tem uma conta? <a href="#">Registe-se aqui. </a>
+                     </p>       
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html> 
