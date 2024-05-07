@@ -2,8 +2,8 @@
 
 
 body, html {
-    height: 100%;
     background-color: #f0f0f0;
+    height: 100%;
 }
 
 .container {
@@ -11,7 +11,7 @@ body, html {
     justify-content: space-between; 
     align-items: flex-start; 
     padding: 20px;
-    height: calc(100vh - 40px);
+    min-height: calc(100vh - 192px);
 }
 
 .form-section {
@@ -53,8 +53,7 @@ button {
     background-color: #5cb85c;
     color: white;
     border-radius: 4px;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
 
 button:hover {
@@ -71,4 +70,46 @@ ul {
     margin-top: 5px;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.usage-info {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch; 
+    }
+
+    .form-section, .list-section {
+        margin-right: 0; 
+        flex: none; 
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        padding: 10px; 
+    }
+
+    label, input[type="text"], input[type="date"], button {
+        font-size: 16px; 
+    }
+
+    input[type="text"], input[type="date"] {
+        padding: 12px; 
+    }
+
+    button {
+        padding: 12px; 
+    }
 }

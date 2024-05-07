@@ -50,6 +50,11 @@ header {
     font-weight: 400;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
 .login-button button {
     border: none;
     padding: 10px 15px;
@@ -62,6 +67,11 @@ header {
     color: #fff;
     font-weight: 500;
     font-size: 1.1rem;
+}
+
+
+.login-button button:hover {
+    background-color: #4e7729; 
 }
 
 .mobile-menu-icon {

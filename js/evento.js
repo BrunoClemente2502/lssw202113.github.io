@@ -37,21 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('registo-evento').addEventListener('submit', function(event) {
         event.preventDefault(); 
-
+    
         const eventDate = document.getElementById('dataEvento').value;
         const team1 = document.getElementById('visitado').value;
         const team2 = document.getElementById('visitante').value;
-
-        // Criar novo objecto
+    
+        // Verificar se os nomes das equipas são iguais
+        if (team1.trim().toLowerCase() === team2.trim().toLowerCase()) {
+            alert('As equipas não podem ter o mesmo nome. Por favor, introduza nomes diferentes para as equipas.');
+            return; // Não continuar com o registo do evento
+        }
+    
+        // Criar novo objeto
         const newEvent = { date: eventDate, team1: team1, team2: team2 };
-
+    
         // Adicionar o novo evento
         events.push(newEvent);
-
-        // Actualizar a lista
+    
+        // Atualizar a lista
         updateEventsList();
-
+    
         // Limpar os campos de formulário
         this.reset();
     });
+    
 });

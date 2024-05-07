@@ -4,31 +4,40 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    text-align: center;
-    background-color: #ddd;
-}
 
 .content {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    align-items: center; 
+    min-height: calc(100vh - 170px);
 }
+
+.info-sections {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+    
+}
+
 
 .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px; 
+    margin: 0 10px;
+    width: 100%; 
 }
 
-.risk-analysis h1 {
-    font-size: 45px; 
-    margin: 0; 
+.risk-analysis, .risk-analysis h1, .risk-analysis h2 {
+    text-align: left;
+    margin: 2px;
+    padding-bottom: 10px; 
     font-weight: bold;
 }
 
-/* Meteo and icon settings */
+/* Meteo e icones */
 .top-right-meteo {
     display: flex;
     padding: 10px;
@@ -56,14 +65,99 @@ header {
     transform: rotate(90deg);
 }
 
-/* Other sections */
-#adeptos, #diretores-seguranca, #recinto {
-    margin: 10px;
+
+/* ajustes para side-sections */
+.side-by-side-sections {
+    display: flex;
+    justify-content: space-around; 
+    align-items: stretch; 
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+#recinto, #supporters-risk, #heatmap {
+    flex: 1; 
     padding: 10px;
+    margin: 10px;
     border: 1px solid #ccc;
     background-color: #fff;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; 
+    border-radius: 15px;
+}
+
+#recinto, #supporters-risk {
+    max-width: calc((100% - 60px) / 4); 
+}
+
+#heatmap {
+    max-width: calc((100% - 60px) / 2); 
+}
+
+
+.stadium-image img, .supporters-image img, #heatmap img {
+    max-width: 300px; 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 15px;
+}
+
+#heatmap img {
+    max-width: 600px;
 }
 
 h2 {
+    text-align: center;
     color: #004d99;
+    font-size: 22px; 
 }
+
+
+.match-info h2 {
+    margin-bottom: 0; 
+}
+
+.match-info p#match-date {
+    font-size: 16px; 
+    color: #666; 
+    margin-top: 5px;
+    margin: 2px; 
+}
+
+
+/*responsividade*/
+@media (max-width: 768px) { 
+    .side-by-side-sections {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #recinto, #supporters-risk, #heatmap {
+        width: 90%; 
+        max-width: none; 
+        margin: 10px 0;
+    }
+
+    #heatmap img {
+        max-width: 100%; 
+    }
+
+    .stadium-image img, .supporters-image img, #heatmap img {
+        max-width: 100%; 
+    }
+}
+
+.usage-info {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none; 
+}
+

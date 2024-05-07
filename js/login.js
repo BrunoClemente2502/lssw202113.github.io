@@ -7,7 +7,7 @@ window.onload = function() {
 
         if (!regex.test(email)) {
             alert("Por favor, insira um endereço de email válido. Ex: exemplo@exemplo.pt");
-            event.preventDefault(); // Impede o envio do formulário
+            event.preventDefault(); 
         }
     });
 };

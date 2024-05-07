@@ -3,14 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Bem-vindo</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="shortcut icon" href="imagens/logo/sem-fundo-web-pequena.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div id="menu-container"></div>
-        <script src="js/menu.js"></script> 
-        teste
+        <script src="js/menu.js"></script>
     </header>
+    <main>
+        <section>
+            <h2>Sobre o Site</h2>
+            <p>Este é um projecto desenvolvido para fins académicos que visa oferecer uma plataforma para análise de risco de eventos desportivos.</p>
+        </section>
+        <section>
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li><a href="login.html">Entrar</a> - Acesso à  conta pessoal.</li>
+                <li><a href="registo.html">Registar</a> - Criar uma conta.</li>
+                <li><a href="analise.html">Análise de Risco</a> - Uma simulação de como poderia ser o output de uma análise de risco.</li>
+                <li><a href="evento.html">Registar Evento</a> - Adicionar novos eventos desportivos.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <p>Para mais informações ou assistência, por favor, entre em contacto connosco através do email [email@example.com].</p>
+        </section>
+
+        <hr>
+        <p><strong>Marcas HTML usadas:</strong></p>
+        <ul>
+            <li>Marca &lt;!DOCTYPE html&gt; para declarar o tipo de documento como HTML5.</li>
+            <li>Marca &lt;html&gt; que é a raiz do documento HTML.</li>
+            <li>Marca &lt;head&gt; que contém metadados como &lt;meta&gt;, &lt;title&gt; e &lt;link&gt;.</li>
+            <li>Marca &lt;meta charset="UTF-8"&gt; para definir a codificação de caracteres para o documento.</li>
+            <li>Marca &lt;meta name="viewport"&gt; para controlar a área de visualização da página.</li>
+            <li>Marca &lt;title&gt; para definir o título da página.</li>
+            <li>Marca &lt;link&gt; para ligar folhas de estilo externas, definir e definir o favicon.</li>
+            <li>Marca &lt;body&gt; que contém todo o conteúdo da página como &lt;header&gt;, &lt;main&gt; e &lt;footer&gt;.</li>
+            <li>Marca &lt;header&gt; para a cabeça do documento.</li>
+            <li>Marca &lt;div&gt; usada no cabeçalho para conter o menu (id="menu-container").</li>
+            <li>Marca &lt;section&gt; usada para organizar conteúdo por temas.</li>
+            <li>Marca &lt;a&gt; usada para criar links clicáveis.</li>
+            <li>Marca &lt;p&gt; para parágrafos de texto.</li>
+            <li>Marca &lt;ul&gt; para listas não ordenadas.</li>
+            <li>Marca &lt;li&gt; para itens de lista.</li>
+            <li>Marca &lt;script&gt; para incluir scripts JavaScript, como o do menu.</li>
+            <li>Marca &lt;footer&gt; para o rodapé do documento.</li>
+        </ul>
+        <br>
+        <p><strong>Propriedades CSS usados:</strong></p>
+        <ul>
+            <li><strong>padding:</strong> Aplicado a <em>main</em> e <em>section</em> para adicionar espaço dentro dos elementos, melhorando a legibilidade e o conforto visual.</li>
+            <li><strong>max-width:</strong> Limita a largura máxima do elemento <em>main</em> a 800px para garantir que o conteúdo seja fácil de ler em dispositivos largos.</li>
+            <li><strong>margin:</strong> Centraliza o elemento <em>main</em> horizontalmente na página e adiciona margem abaixo de cada <em>section</em> para separar visualmente as seções.</li>
+            <li><strong>min-height:</strong> Define a altura mínima do elemento <em>main</em> como a altura da viewport menos 230px, assegurando que main ocupa uma quantidade adequada de espaço na tela. Estavamos com dificuldade em igualar a localização do footer em todos os documentos, pelo que também auxiliou neste expediente</li>
+            <li><strong>background:</strong> Define a cor de fundo das <em>section</em> como branca, destacando-as contra outras cores de fundo da página.</li>
+            <li><strong>border-radius:</strong> Arredonda os cantos das <em>section</em> com um raio de 8px para um design mais suave e moderno.</li>
+            <li><strong>box-shadow:</strong> Adiciona sombras subtis abaixo das <em>section</em> para criar uma sensação de elevação e componente estética.</li>
+            <li><strong>text-decoration:</strong> Remove o sublinhado dos links (<em>a</em>) para um visual mais limpo, e adiciona sublinhado ao passar o mouse (<em>a:hover</em>) para indicar interatividade.</li>
+            <li><strong>list-style-type:</strong> Remove os marcadores padrão de listas (<em>ul</em>) para um design mais limpo.</li>
+            <li><strong>margin-bottom:</strong> Adiciona uma margem na parte inferior de cada <em>section</em> para criar espaço entre as seções consecutivas, em vista melhorar a separação visual e a organização do conteúdo.</li>
+            <li><strong>font-family:</strong> Determina a família de fontes dos elementos, proporcionando uma aparência consistente e suporte a diferentes sistemas operacionais e dispositivos.</li>
+            <li><strong>text-align:</strong> Alinha o texto dentro de um elemento, usado aqui para justificar ou centralizar o texto, dependendo do contexto.</li>
+            <li><strong>background:</strong> Define a cor de fundo dos elementos, usada para criar contraste visual e destacar áreas específicas da página.</li>
+            <li><strong>color:</strong> Especifica a cor do texto, garantindo legibilidade e contraste adequados com o fundo.</li>
+            <li><strong>width:</strong> Controla a largura de um elemento, aqui usado para estender o rodapé por toda a largura da viewport.</li>
+            <li><strong>border-radius:</strong> Arredonda os cantos de elementos, como imagens e seções, para um visual mais suave e moderno.</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bruno Clemente 2002113 </p>
+    </footer>
 </body>
 </html>

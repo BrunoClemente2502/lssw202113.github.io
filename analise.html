@@ -7,44 +7,103 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/analise.css">
     <script src="js/analise.js"></script>
+    <link rel="shortcut icon" href="imagens/logo/sem-fundo-web-pequena.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div id="menu-container"></div>
         <script src="js/menu.js"></script>
     </header>
-    <div class="content">
-        <div class="top-row">
-            <div class="risk-analysis">
-                <h1>Análise de Risco</h1>
-            </div>
-            <div class="top-right-meteo">
-                <div id="meteo">
-                    <div class="weather-icon">
-                        <img id="weather-icon" src="placeholder" alt="Ícone meteo">
+    <main>
+        <div class="content">
+            <div class="top-row">
+                <div class="risk-analysis">
+                    <h1>Análise de Risco</h1>
+                    <div class="match-info">
+                        <h2>Sporting CP vs SC Braga</h2>
+                        <p id="match-date">08/05/2024</p>
                     </div>
-                    <div class="temperature-icon">
-                        <img id="temperature-icon" src="placeholder" alt="Ícone temperatura">
+                </div>
+                <div class="top-right-meteo">
+                    <div id="meteo">
+                        <div class="weather-icon">
+                            <img id="weather-icon" src="placeholder" alt="Ícone meteo">
+                        </div>
+                        <div class="temperature-icon">
+                            <img id="temperature-icon" src="placeholder" alt="Ícone temperatura">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <main>
+        <div class="side-by-side-sections">
             <section id="recinto">
-                <img src="" alt="Estádio José Alvalade">
-                <p>Capacidade: 50466</p>
-                <p>Nível de risco do recinto: (ter cor)</p>
-            </section>
-            <section id="diretores-seguranca">
-                <h2>Contacto:</h2>
-                <p><strong>Diretor Segurança Sporting CP:</strong> +351930000000</p>
-                <p><strong>Director Segurança SC Braga:</strong> +351960000000</p>
+                <h2>Recinto Desportivo</h2>
+                <div class="stadium-image">
+                    <img src="imagens/analise/estadio.webp" alt="Estádio X">
+                </div>
+                <div class="stadium-info">                        
+                    <p><strong>Designação:</strong> Estádio X</p>
+                    <p><strong>Capacidade:</strong> 50466</p>
+                    <p><strong>Nível da Infraestrutura:</strong> <span>1</span></p>
+                    <p><strong>Nível de acessos:</strong> <span>2</span></p>
+                    <p><strong>Débito de evacuação</strong>: 5000px/min</p>
+                    <p><strong>Outras Informações:</strong></p>
+                </div>
             </section>
             <section id="heatmap">
                 <h2>Heatmap</h2>
-                <img src="path_to_heatmap.jpg" alt="Heatmap">
+                <img src="imagens/analise/heatmap.webp" alt="Heatmap">
             </section>
-        </main>
-    </div>
+            <section id="supporters-risk">
+                <h2>Risco adeptos</h2>
+                <div class="supporters-image">
+                    <img src="imagens/analise/adeptos.webp" alt="Adeptos">
+                </div>                    
+                <p><strong>Adeptos visitado:</strong> <span>3</span></p>
+                <p><strong>Adeptos visitante:</strong> <span>4</span></p>
+                <p><strong>Entre adeptos:</strong> <span>5</span></p>
+            </section>         
+        </div>
+        
+        <div class="usage-info">
+            <hr>
+            <p><strong>Marcas HTML adicionais usadas:</strong></p>
+            <ul>
+                <li>Marca &lt;div&gt; para agrupar conteúdo dentro de &lt;main&gt; e dentro de elementos individuais, para facilitar a estilização e script.</li>
+                <li>Marca &lt;h1&gt; para o título principal da página "Análise de Risco".</li>
+                <li>Marca &lt;img&gt; usada para inserir imagens no documento, como ícones de tempo, ícones de temperatura e fotografias do estádio, com o atributo alt para melhorar a acessibilidade.</li>
+                <li>Marca &lt;span&gt; para destacar e separar elementos específicos dentro dos parágrafos, como níveis e valores específicos em &lt;p&gt;.</li>
+                <li>Marca &lt;strong&gt; utilizada para enfatizar texto dentro de parágrafos, realçando informações importantes.</li>
+            </ul>
+            <br>
+            <p><strong>Propriedades CSS adicionais usadas:</strong></p>
+            <ul>
+                <li><strong>display:</strong> Usado para definir o tipo de exibição dos elementos. O valor 'flex' visou facilitar (nem sempre foi conseguido) o design responsivo e a alinhamento dos itens dentro dos containers criados.</li>
+                <li><strong>flex-direction:</strong> para controlar a direção dos itens flex, aqui definida como 'column' para organizar os elementos verticalmente dentro dos cointainers.</li>
+                <li><strong>align-items:</strong> para alinhar itens ao longo do eixo transversal do container. </li>
+                <li><strong>justify-content:</strong> para alinha itens ao longo do eixo principal do container. 'Space-between' tentou permitir que os itens se distribuam igualmente com espaço entre eles, e 'center' centraliza os itens dentro de seus cointainers.</li>
+                <li><strong>padding-top:</strong> Adiciona um espaçamento no topo do elemento .content para separar visualmente o conteúdo do topo da página.</li>
+                <li><strong>min-height:</strong> Define a altura mínima de .content como a altura da viewport menos 170px, ajustando dinamicamente o espaço vertical que o elemento ocupa baseado no tamanho da tela. Serviu também para equilibar a localização do footer</li>
+                <li><strong>object-fit:</strong> Especifica como a imagem deve ser redimensionada para se ajustar ao seu container, com 'contain' garantindo que toda a imagem seja visível sem distorção.</li>
+                <li><strong>height:</strong> Usado em conjunto para definir a altura total da página, garantindo que preenche toda a altura da viewport.</li>
+                <li><strong>transform:</strong> para aplicar uma rotação ao ícone da temperatura em 90 graus.</li>
+                <li><strong>box-sizing:</strong> Altera o modelo de caixa CSS padrão usado para calcular larguras e alturas dos elementos para que inclua qualquer padding e border nos valores de largura e altura especificados.</li>
+                <li><strong>border:</strong> para aplicar uma borda ao redor de certos elementos para definir limites visuais.</li>
+                <li><strong>flex:</strong> definir a proporção de espaço que cada item tomará dentro de um container flex, com '1' permitindo que os itens cresçam para ocupar o espaço disponível proporcionalmente.</li>
+                <li><strong>max-width:</strong> controlar a largura máxima de determinados elementos para garantir que eles não se estendam além de um certo ponto, mesmo que haja espaço disponível.</li>
+                <li><strong>margin-top:</strong> Usado nas etiquetas <em>label</em> para criar um espaço vertical entre eles e os elementos acima, melhorando a clareza visual.</li>
+                <li><strong>width:</strong> Controla a largura dos campos, garantindo que eles ocupem quase todo o espaço disponível dentro dos containers, menos 20px para o padding.</li>
+                <li><strong>border:</strong> Define a aparência das bordas dos campos de entrada e botões. Para os campos de entrada, é aplicada uma borda sólida para delinear claramente o campo. Os botões têm a borda removida para um design mais limpo.</li>
+                <li><strong>@media (max-width):</strong> Usado para criar regras de estilo específicas para diferentes tamanhos de tela, garantindo que a página seja responsiva e funcional em dispositivos de variados tamanhos.</li>
+                <li><strong>flex-direction:</strong> Modifica a direção dos itens dentro do <em>.container</em> para 'column' em telas menores, empilhando os conteúdos verticalmente para melhor adaptação a telas estreitas.</li>
+                
+            </ul>
+
+        </div>   
+        </ul>                     
+    </main>
+    <footer>
+        <p>&copy; 2024 Bruno Clemente 2002113 </p>
+    </footer>
 </body>
 </html>

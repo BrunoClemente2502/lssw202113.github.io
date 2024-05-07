@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registo</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/login.css">
     <script src="js/login.js"></script>
+    <script src="js/registo.js"></script>
     <link rel="shortcut icon" href="imagens/logo/sem-fundo-web-pequena.png" type="image/x-icon">
 </head>
 <body>
@@ -16,30 +17,36 @@
     </header>  
     <main>
         <div class="envolvimento">
-            <form id="login-form" action="/login" method="post">
-                <h1>Entrar</h1>
+            <form id="signup-form" action="/register" method="post">
+                <h1>Registo</h1>
+                <div class="caixa-input">
+                    <label for="firstName" class="escondido">Primeiro Nome</label>
+                    <input type="text" name="firstName" id="firstName" required placeholder="Primeiro nome">
+                    
+                </div>
+                <div class="caixa-input">
+                    <label for="lastName" class="escondido">Nome de Família</label>
+                    <input type="text" name="lastName" id="lastName" required placeholder="Nome de família">
+                    
+                </div>
                 <div class="caixa-input">
                     <label for="email" class="escondido">Email</label>
                     <input type="email" name="email" id="email" required placeholder="Email">
-                    <img src="imagens/login/bx-user.svg" alt="Utilizador">
+                    
                 </div>
-
                 <div class="caixa-input">
                     <label for="password" class="escondido">Palavra-passe</label>
                     <input type="password" name="password" id="password" required placeholder="Palavra-passe">
-                    <img src="imagens/login/bx-lock.svg" alt="Password">
+                    
                 </div>
-                
-                <div class="lembrar-esqueceu">
-                    <label for=""><input type="checkbox"> Lembre-se de mim</label>
-                    <a href="#">Recuperar palavra-passe?</a>
+                <div class="caixa-input">
+                    <label for="confirmPassword" class="escondido">Confirmar Palavra-passe</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" required placeholder="Confirmar palavra-passe">
+                    
                 </div>
-
-                <button type="submit" class="btn">Entrar</button>
-                
+                <button type="submit" class="btn">Registar</button>
                 <div class="link-registo">
-                    <p>Não tem uma conta? <a href="registo.html">Registe-se aqui. </a>
-                     </p>       
+                    <p>Já tem uma conta? <a href="login.html">Entrar aqui.</a></p>       
                 </div>
             </form>
         </div>
